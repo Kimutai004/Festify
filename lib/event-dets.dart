@@ -1,3 +1,8 @@
+import 'package:festiy/activity.dart';
+import 'package:festiy/home.dart';
+import 'package:festiy/search.dart';
+import 'package:festiy/tickets.dart';
+import 'package:festiy/wallet.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -56,6 +61,12 @@ class EventDetails extends StatelessWidget {
           Positioned(
             left: 19,
             top: 1032,
+            child:GestureDetector(
+              onTap: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Home()),
+                );
+              },
             child: Container(
               width: 40,
               height: 40,
@@ -67,9 +78,16 @@ class EventDetails extends StatelessWidget {
               ),
             ),
           ),
+          ),
           Positioned(
             left: 284,
             top: 1032,
+            child:GestureDetector(
+              onTap: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Wallet()),
+                );
+              },
             child: Container(
               width: 40,
               height: 40,
@@ -81,9 +99,16 @@ class EventDetails extends StatelessWidget {
               ),
             ),
           ),
+          ),
           Positioned(
             left: 110,
             top: 1032,
+            child:GestureDetector(
+              onTap: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Tickets()),
+                );
+              },
             child: Container(
               width: 40,
               height: 40,
@@ -94,6 +119,7 @@ class EventDetails extends StatelessWidget {
                 ),
               ),
             ),
+          ),
           ),
           Positioned(
             left: 68,
@@ -224,6 +250,12 @@ class EventDetails extends StatelessWidget {
           Positioned(
             left: 200,
             top: 1032,
+            child:GestureDetector(
+              onTap: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Activity()),
+                );
+              },
             child: Container(
               width: 40,
               height: 40,
@@ -235,9 +267,16 @@ class EventDetails extends StatelessWidget {
               ),
             ),
           ),
+          ),
           Positioned(
             left: 244,
             top: 21,
+            child:GestureDetector(
+              onTap: (){
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Search()),
+                );
+              },
             child: Container(
               width: 40,
               height: 40,
@@ -248,6 +287,7 @@ class EventDetails extends StatelessWidget {
                 ),
               ),
             ),
+          ),
           ),
           Positioned(
             left: 308,

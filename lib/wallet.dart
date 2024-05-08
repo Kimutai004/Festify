@@ -1,3 +1,7 @@
+import 'package:festiy/activity.dart';
+import 'package:festiy/home.dart';
+import 'package:festiy/tickets.dart';
+import 'package:festiy/transactions.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -62,6 +66,12 @@ class Wallet extends StatelessWidget {
               Positioned(
                 left: 26,
                 top: 878,
+                child:GestureDetector(
+                  onTap: (){
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Home()),
+                    );
+                  },
                 child: Container(
                   width: 40,
                   height: 40,
@@ -73,9 +83,16 @@ class Wallet extends StatelessWidget {
                   ),
                 ),
               ),
+              ),
               Positioned(
                 left: 290,
                 top: 878,
+                child:GestureDetector(
+                  onTap: (){
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Wallet()),
+                    );
+                  },
                 child: Container(
                   width: 40,
                   height: 40,
@@ -87,9 +104,16 @@ class Wallet extends StatelessWidget {
                   ),
                 ),
               ),
+              ),
               Positioned(
                 left: 116,
                 top: 878,
+                child:GestureDetector(
+                  onTap: (){
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Tickets()),
+                    );
+                  },
                 child: Container(
                   width: 40,
                   height: 40,
@@ -100,6 +124,7 @@ class Wallet extends StatelessWidget {
                     ),
                   ),
                 ),
+              ),
               ),
               Positioned(
                 left: 310,
@@ -118,6 +143,12 @@ class Wallet extends StatelessWidget {
               Positioned(
                 left: 206,
                 top: 878,
+                child:GestureDetector(
+                  onTap: (){
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Activity()),
+                    );
+                  },
                 child: Container(
                   width: 40,
                   height: 40,
@@ -128,6 +159,7 @@ class Wallet extends StatelessWidget {
                     ),
                   ),
                 ),
+              ),
               ),
               Positioned(
                 left: 22,
@@ -228,6 +260,12 @@ class Wallet extends StatelessWidget {
               Positioned(
                 left: 35,
                 top: 207,
+                child:GestureDetector(
+                  onTap: (){
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Transactions()),
+                    );
+                  },
                 child: Container(
                   width: 300,
                   height: 66,
@@ -238,6 +276,7 @@ class Wallet extends StatelessWidget {
                     ),
                   ),
                 ),
+              ),
               ),
               Positioned(
                 left: 30,

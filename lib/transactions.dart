@@ -1,3 +1,7 @@
+import 'package:festiy/activity.dart';
+import 'package:festiy/home.dart';
+import 'package:festiy/tickets.dart';
+import 'package:festiy/wallet.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -56,44 +60,65 @@ class Transactions extends StatelessWidget {
               Positioned(
                 left: 22,
                 top: 746,
+                child:GestureDetector(
+                  onTap: (){
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Home()),
+                    );
+                  },
                 child: Container(
                   width: 40,
                   height: 40,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/40x40"),
+                      image: AssetImage("assets/Home.png"),
                       fit: BoxFit.contain,
                     ),
                   ),
                 ),
+              ),
               ),
               Positioned(
                 left: 284,
                 top: 746,
+                child:GestureDetector(
+                  onTap: (){
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Wallet()),
+                    );
+                  },
                 child: Container(
                   width: 40,
                   height: 40,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/40x40"),
+                      image: AssetImage("assets/Wallet.png"),
                       fit: BoxFit.contain,
                     ),
                   ),
                 ),
               ),
+              ),
               Positioned(
                 left: 110,
                 top: 746,
+                child:GestureDetector(
+                  onTap: (){
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Tickets()),
+                    );
+                  },
                 child: Container(
                   width: 40,
                   height: 40,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/40x40"),
+                      image: AssetImage("assets/Two Tickets.png"),
                       fit: BoxFit.contain,
                     ),
                   ),
                 ),
+              ),
               ),
               Positioned(
                 left: 310,
@@ -103,7 +128,7 @@ class Transactions extends StatelessWidget {
                   height: 44,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/50x44"),
+                      image: AssetImage("assets/Menu Vertical.png"),
                       fit: BoxFit.contain,
                     ),
                   ),
@@ -112,16 +137,23 @@ class Transactions extends StatelessWidget {
               Positioned(
                 left: 200,
                 top: 746,
+                child:GestureDetector(
+                  onTap: (){
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Activity()),
+                    );
+                  },
                 child: Container(
                   width: 40,
                   height: 40,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/40x40"),
+                      image: AssetImage("assets/Activity Feed.png"),
                       fit: BoxFit.contain,
                     ),
                   ),
                 ),
+              ),
               ),
               Positioned(
                 left: 20,
