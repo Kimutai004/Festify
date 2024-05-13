@@ -1,4 +1,6 @@
-import 'package:flutter/material.dart';
+
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/material.dart'; // Import Firebase Core
 import 'home.dart';
 import 'splash.dart';
 import 'login.dart';
@@ -14,7 +16,11 @@ import 'event-dets.dart';
 import 'extra.dart';
 import 'feedback.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
