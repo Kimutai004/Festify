@@ -30,737 +30,729 @@ class FigmaToCodeApp extends StatelessWidget {
 class Wallet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          width: 360,
-          height: 930,
-          clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment(0.00, -1.00),
-              end: Alignment(0, 1),
-              colors: [Colors.white.withOpacity(0), Colors.white],
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Container(
+            width: 360,
+            height: 930,
+            clipBehavior: Clip.antiAlias,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment(0.00, -1.00),
+                end: Alignment(0, 1),
+                colors: [Colors.white.withOpacity(0), Colors.white],
+              ),
             ),
-          ),
-          child: Stack(
-            children: [
-              Positioned(
-                left: 0,
-                top: 0,
-                child: Container(
-                  width: 360,
-                  height: 56,
-                  decoration: BoxDecoration(color: Colors.white),
-                ),
-              ),
-              Positioned(
-                left: 0,
-                top: 864,
-                child: Container(
-                  width: 360,
-                  height: 69,
-                  decoration: BoxDecoration(color: Color(0xFFD9D9D9)),
-                ),
-              ),
-              Positioned(
-                left: 26,
-                top: 878,
-                child:GestureDetector(
-                  onTap: (){
-                    Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Home()),
-                    );
-                  },
-                child: Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/Home.png"),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                ),
-              ),
-              ),
-              Positioned(
-                left: 290,
-                top: 878,
-                child:GestureDetector(
-                  onTap: (){
-                    Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Wallet()),
-                    );
-                  },
-                child: Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/Wallet.png"),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                ),
-              ),
-              ),
-              Positioned(
-                left: 116,
-                top: 878,
-                child:GestureDetector(
-                  onTap: (){
-                    Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Tickets()),
-                    );
-                  },
-                child: Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/Two Tickets.png"),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                ),
-              ),
-              ),
-              Positioned(
-                left: 310,
-                top: 12,
-                child: Container(
-                  width: 50,
-                  height: 44,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/Menu Vertical.png"),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 206,
-                top: 878,
-                child:GestureDetector(
-                  onTap: (){
-                    Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Activity()),
-                    );
-                  },
-                child: Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/Activity Feed.png"),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                ),
-              ),
-              ),
-              Positioned(
-                left: 22,
-                top: 134,
-                child: Container(
-                  width: 325,
-                  height: 61,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFD9D9D9),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 42,
-                top: 141,
-                child: Container(
-                  width: 40,
-                  height: 47,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/Cash.png"),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 94,
-                top: 168,
-                child: SizedBox(
-                  width: 59,
-                  height: 28,
-                  child: Text(
-                    'Ksh. 100',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 12,
-                      fontFamily: 'Kadwa',
-                      fontWeight: FontWeight.w400,
-                      height: 0,
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 213,
-                top: 166,
-                child: SizedBox(
-                  width: 59,
-                  height: 28,
-                  child: Text(
-                    'Ksh. 0',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 12,
-                      fontFamily: 'Kadwa',
-                      fontWeight: FontWeight.w400,
-                      height: 0,
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 94,
-                top: 144,
-                child: Text(
-                  'Balance',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 12,
-                    fontFamily: 'Kadwa',
-                    fontWeight: FontWeight.w700,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 180,
-                top: 149,
-                child: Transform(
-                  transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(1.57),
+            child: Stack(
+              children: [
+                Positioned(
+                  left: 0,
+                  top: 0,
                   child: Container(
-                    width: 34,
-                    decoration: ShapeDecoration(
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(
-                          width: 1,
-                          strokeAlign: BorderSide.strokeAlignCenter,
+                    width: 360,
+                    height: 56,
+                    decoration: BoxDecoration(color: Colors.white),
+                  ),
+                ),
+                Positioned(
+                  left: 0,
+                  top: 864,
+                  child: Container(
+                    width: 360,
+                    height: 69,
+                    decoration: BoxDecoration(color: Color(0xFFD9D9D9)),
+                  ),
+                ),
+                Positioned(
+                  left: 26,
+                  top: 878,
+                  child:GestureDetector(
+                    onTap: (){
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Home()),
+                      );
+                    },
+                    child: Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/Home.png"),
+                          fit: BoxFit.contain,
                         ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              Positioned(
-                left: 35,
-                top: 207,
-                child:GestureDetector(
-                  onTap: (){
-                    Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => Transactions()),
-                    );
-                  },
-                child: Container(
-                  width: 300,
-                  height: 66,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFD9D9D9),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
+                Positioned(
+                  left: 290,
+                  top: 878,
+                  child:GestureDetector(
+                    onTap: (){
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Wallet()),
+                      );
+                    },
+                    child: Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/Wallet.png"),
+                          fit: BoxFit.contain,
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              ),
-              Positioned(
-                left: 30,
-                top: 683,
-                child: Container(
-                  width: 300,
-                  height: 66,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFD9D9D9),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
+                Positioned(
+                  left: 116,
+                  top: 878,
+                  child:GestureDetector(
+                    onTap: (){
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Tickets()),
+                      );
+                    },
+                    child: Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/Two Tickets.png"),
+                          fit: BoxFit.contain,
+                        ),
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Positioned(
-                left: 30,
-                top: 774,
-                child: Container(
-                  width: 300,
-                  height: 66,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFD9D9D9),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 35,
-                top: 297,
-                child: Container(
-                  width: 300,
-                  height: 195,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFD9D9D9),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 35,
-                top: 517,
-                child: Container(
-                  width: 300,
-                  height: 137,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFD9D9D9),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 58,
-                top: 310,
-                child: SizedBox(
-                  width: 52,
-                  height: 26,
-                  child: Text(
-                    'Deposit',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 12,
-                      fontFamily: 'Kadwa',
-                      fontWeight: FontWeight.w700,
-                      height: 0,
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 58,
-                top: 528,
-                child: SizedBox(
-                  width: 85,
-                  height: 26,
-                  child: Text(
-                    'Withdraw',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 12,
-                      fontFamily: 'Kadwa',
-                      fontWeight: FontWeight.w700,
-                      height: 0,
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 56,
-                top: 327,
-                child: Text(
-                  'Send money  to your wallet',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 12,
-                    fontFamily: 'Kadwa',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 58,
-                top: 395,
-                child: Container(
-                  width: 243,
-                  height: 44,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFF4F4F4),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 58,
-                top: 575,
-                child: Container(
-                  width: 243,
-                  height: 44,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFF4F4F4),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 82,
-                top: 409,
-                child: SizedBox(
-                  width: 95,
-                  height: 16,
-                  child: Text(
-                    'Enter Amount to deposit',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 8,
-                      fontFamily: 'Kadwa',
-                      fontWeight: FontWeight.w400,
-                      height: 0,
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 85,
-                top: 592,
-                child: SizedBox(
-                  width: 128,
-                  height: 16,
-                  child: Text(
-                    'Enter Amount toWithdraw',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 8,
-                      fontFamily: 'Kadwa',
-                      fontWeight: FontWeight.w400,
-                      height: 0,
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 204,
-                top: 144,
-                child: Text(
-                  'Interest ',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 12,
-                    fontFamily: 'Kadwa',
-                    fontWeight: FontWeight.w700,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 60,
-                top: 359,
-                child: Container(
-                  width: 50,
-                  height: 23,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFFB8383),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 124,
-                top: 359,
-                child: Container(
-                  width: 50,
-                  height: 23,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFFB8383),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 188,
-                top: 359,
-                child: Container(
-                  width: 50,
-                  height: 23,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFFB8383),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 254,
-                top: 359,
-                child: Container(
-                  width: 50,
-                  height: 23,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFFB8383),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 75,
-                top: 357,
-                child: Text(
-                  '50',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 12,
-                    fontFamily: 'Kadwa',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 137,
-                top: 357,
-                child: Text(
-                  '100',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 12,
-                    fontFamily: 'Kadwa',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 204,
-                top: 359,
-                child: Text(
-                  '200',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 12,
-                    fontFamily: 'Kadwa',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 267,
-                top: 359,
-                child: Text(
-                  '500',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 12,
-                    fontFamily: 'Kadwa',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 34,
-                top: 73,
-                child: Container(
-                  width: 48,
-                  height: 48,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFD9D9D9),
-                    shape: OvalBorder(),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 107,
-                top: 71,
-                child: Text(
-                  'sth@gmail.com',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 12,
-                    fontFamily: 'Kadwa',
-                    fontWeight: FontWeight.w700,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 109,
-                top: 95,
-                child: Text(
-                  '1234567890',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 12,
-                    fontFamily: 'Kadwa',
-                    fontWeight: FontWeight.w700,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 34,
-                top: 71,
-                child: Container(
-                  width: 48,
-                  height: 48,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage("assets/User.png"),
-                      fit: BoxFit.contain,
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 53,
-                top: 447,
-                child: Container(
-                  width: 178,
-                  height: 37,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFF33F3F),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(25),
-                    ),
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 110,
-                top: 452,
-                child: Text(
-                  'Deposit',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                    fontFamily: 'Kadwa',
-                    fontWeight: FontWeight.w700,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 56,
-                top: 545,
-                child: Text(
-                  'Withdraw money from your Tokea wallet',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 12,
-                    fontFamily: 'Kadwa',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 62,
-                top: 619,
-                child: Text(
-                  'MIN: 50 /=',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 12,
-                    fontFamily: 'Kadwa',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 175,
-                top: 619,
-                child: Text(
-                  'MAX: 150000 /=',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 12,
-                    fontFamily: 'Kadwa',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 66,
-                top: 226,
-                child: Text(
-                  'My Transactions',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 15,
-                    fontFamily: 'Kadwa',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 254,
-                top: 256,
-                child: Transform(
-                  transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                Positioned(
+                  left: 310,
+                  top: 12,
                   child: Container(
-                    width: 30,
-                    height: 30,
+                    width: 50,
+                    height: 44,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage("assets/Expand Arrow.png"),
+                        image: AssetImage("assets/Menu Vertical.png"),
                         fit: BoxFit.contain,
                       ),
                     ),
                   ),
                 ),
-              ),
-              Positioned(
-                left: 62,
-                top: 697,
-                child: Text(
-                  'Feedback and Support',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 15,
-                    fontFamily: 'Kadwa',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
+                Positioned(
+                  left: 206,
+                  top: 878,
+                  child:GestureDetector(
+                    onTap: (){
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Activity()),
+                      );
+                    },
+                    child: Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/Activity Feed.png"),
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
-              ),
-              Positioned(
-                left: 49,
-                top: 792,
-                child: Text(
-                  'Security and Privacy',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 15,
-                    fontFamily: 'Kadwa',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
+                Positioned(
+                  left: 22,
+                  top: 134,
+                  child: Container(
+                    width: 325,
+                    height: 61,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFFD9D9D9),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ],
+                Positioned(
+                  left: 42,
+                  top: 141,
+                  child: Container(
+                    width: 40,
+                    height: 47,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("assets/Cash.png"),
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 94,
+                  top: 168,
+                  child: SizedBox(
+                    width: 59,
+                    height: 28,
+                    child: Text(
+                      'Ksh. 100',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 12,
+                        fontFamily: 'Kadwa',
+                        fontWeight: FontWeight.w400,
+                        height: 0,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 213,
+                  top: 166,
+                  child: SizedBox(
+                    width: 59,
+                    height: 28,
+                    child: Text(
+                      'Ksh. 0',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 12,
+                        fontFamily: 'Kadwa',
+                        fontWeight: FontWeight.w400,
+                        height: 0,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 94,
+                  top: 144,
+                  child: Text(
+                    'Balance',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontFamily: 'Kadwa',
+                      fontWeight: FontWeight.w700,
+                      height: 0,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 180,
+                  top: 149,
+                  child: Transform(
+                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(1.57),
+                    child: Container(
+                      width: 34,
+                      decoration: ShapeDecoration(
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                            width: 1,
+                            strokeAlign: BorderSide.strokeAlignCenter,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 35,
+                  top: 207,
+                  child:GestureDetector(
+                    onTap: (){
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Transactions()),
+                      );
+                    },
+                    child: Container(
+                      width: 300,
+                      height: 66,
+                      decoration: ShapeDecoration(
+                        color: Color(0xFFD9D9D9),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(25),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 30,
+                  top: 683,
+                  child: Container(
+                    width: 300,
+                    height: 66,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFFD9D9D9),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
+
+                  ),
+                ),
+                Positioned(
+                  left: 30,
+                  top: 774,
+                  child: Container(
+                    width: 300,
+                    height: 66,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFFD9D9D9),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 35,
+                  top: 297,
+                  child: Container(
+                    width: 300,
+                    height: 195,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFFD9D9D9),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 35,
+                  top: 517,
+                  child: Container(
+                    width: 300,
+                    height: 137,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFFD9D9D9),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 58,
+                  top: 310,
+                  child: SizedBox(
+                    width: 52,
+                    height: 26,
+                    child: Text(
+                      'Deposit',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 12,
+                        fontFamily: 'Kadwa',
+                        fontWeight: FontWeight.w700,
+                        height: 0,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 58,
+                  top: 528,
+                  child: SizedBox(
+                    width: 85,
+                    height: 26,
+                    child: Text(
+                      'Withdraw',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 12,
+                        fontFamily: 'Kadwa',
+                        fontWeight: FontWeight.w700,
+                        height: 0,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 56,
+                  top: 327,
+                  child: Text(
+                    'Send money  to your wallet',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontFamily: 'Kadwa',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 58,
+                  top: 395,
+                  child: Container(
+                    width: 243,
+                    height: 44,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFFF4F4F4),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.white, // Set the same color as the container
+                        contentPadding: EdgeInsets.symmetric(horizontal: 15),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(25),
+                          borderSide: BorderSide.none, // Remove the border
+                        ),
+                        hintText: 'Enter Deposit Amount',
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 58,
+                  top: 575,
+                  child: Container(
+                    width: 243,
+                    height: 44,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFFF4F4F4),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Colors.white, // Set the same color as the container
+                        contentPadding: EdgeInsets.symmetric(horizontal: 15),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(25),
+                          borderSide: BorderSide.none, // Remove the border
+                        ),
+                        hintText: 'Enter Withdrawal Amount',
+                      ),
+                    ),
+                  ),
+                ),
+
+                Positioned(
+                  left: 204,
+                  top: 144,
+                  child: Text(
+                    'Interest ',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontFamily: 'Kadwa',
+                      fontWeight: FontWeight.w700,
+                      height: 0,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 60,
+                  top: 359,
+                  child: Container(
+                    width: 50,
+                    height: 23,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFFFB8383),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 124,
+                  top: 359,
+                  child: Container(
+                    width: 50,
+                    height: 23,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFFFB8383),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 188,
+                  top: 359,
+                  child: Container(
+                    width: 50,
+                    height: 23,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFFFB8383),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 254,
+                  top: 359,
+                  child: Container(
+                    width: 50,
+                    height: 23,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFFFB8383),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 75,
+                  top: 357,
+                  child: Text(
+                    '50',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontFamily: 'Kadwa',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 137,
+                  top: 357,
+                  child: Text(
+                    '100',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontFamily: 'Kadwa',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 204,
+                  top: 359,
+                  child: Text(
+                    '200',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontFamily: 'Kadwa',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 267,
+                  top: 359,
+                  child: Text(
+                    '500',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontFamily: 'Kadwa',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 34,
+                  top: 73,
+                  child: Container(
+                    width: 48,
+                    height: 48,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFFD9D9D9),
+                      shape: OvalBorder(),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 107,
+                  top: 71,
+                  child: Text(
+                    'sth@gmail.com',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontFamily: 'Kadwa',
+                      fontWeight: FontWeight.w700,
+                      height: 0,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 109,
+                  top: 95,
+                  child: Text(
+                    '1234567890',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontFamily: 'Kadwa',
+                      fontWeight: FontWeight.w700,
+                      height: 0,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 34,
+                  top: 71,
+                  child: Container(
+                    width: 48,
+                    height: 48,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("assets/User.png"),
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 53,
+                  top: 447,
+                  child: Container(
+                    width: 178,
+                    height: 37,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFFF33F3F),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 110,
+                  top: 452,
+                  child: Text(
+                    'Deposit',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontFamily: 'Kadwa',
+                      fontWeight: FontWeight.w700,
+                      height: 0,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 56,
+                  top: 545,
+                  child: Text(
+                    'Withdraw money from your Tokea wallet',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontFamily: 'Kadwa',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 62,
+                  top: 619,
+                  child: Text(
+                    'MIN: 50 /=',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontFamily: 'Kadwa',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 175,
+                  top: 619,
+                  child: Text(
+                    'MAX: 150000 /=',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontFamily: 'Kadwa',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 66,
+                  top: 226,
+                  child: Text(
+                    'My Transactions',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15,
+                      fontFamily: 'Kadwa',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 254,
+                  top: 256,
+                  child: Transform(
+                    transform: Matrix4.identity()..translate(0.0, 0.0)..rotateZ(-1.57),
+                    child: Container(
+                      width: 30,
+                      height: 30,
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assets/Expand Arrow.png"),
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 62,
+                  top: 697,
+                  child: Text(
+                    'Feedback and Support',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15,
+                      fontFamily: 'Kadwa',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  left: 49,
+                  top: 792,
+                  child: Text(
+                    'Security and Privacy',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 15,
+                      fontFamily: 'Kadwa',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

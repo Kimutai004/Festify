@@ -1,3 +1,6 @@
+import 'package:festiy/activity.dart';
+import 'package:festiy/home.dart';
+import 'package:festiy/wallet.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -56,6 +59,12 @@ class Tickets extends StatelessWidget {
               Positioned(
                 left: 22,
                 top: 746,
+                child:GestureDetector(
+                onTap: (){
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context) => Home()),
+                );
+                },
                 child: Container(
                   width: 40,
                   height: 40,
@@ -67,9 +76,16 @@ class Tickets extends StatelessWidget {
                   ),
                 ),
               ),
+              ),
               Positioned(
                 left: 284,
                 top: 746,
+                child:GestureDetector(
+                onTap: (){
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context) => Wallet()),
+                );
+                },
                 child: Container(
                   width: 40,
                   height: 40,
@@ -81,9 +97,16 @@ class Tickets extends StatelessWidget {
                   ),
                 ),
               ),
+              ),
               Positioned(
                 left: 110,
                 top: 746,
+                child:GestureDetector(
+                onTap: (){
+                Navigator.push(context,
+                MaterialPageRoute(builder: (context) => Tickets()),
+                );
+                },
                 child: Container(
                   width: 40,
                   height: 40,
@@ -95,9 +118,16 @@ class Tickets extends StatelessWidget {
                   ),
                 ),
               ),
+              ),
               Positioned(
                 left: 310,
                 top: 12,
+                child:GestureDetector(
+                  onTap: (){
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Activity()),
+                    );
+                  },
                 child: Container(
                   width: 50,
                   height: 44,
@@ -109,10 +139,17 @@ class Tickets extends StatelessWidget {
                   ),
                 ),
               ),
+              ),
               Positioned(
                 left: 200,
                 top: 746,
-                child: Container(
+                child:GestureDetector(
+                  onTap: (){
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Activity()),
+                    );
+                  },
+                  child: Container(
                   width: 40,
                   height: 40,
                   decoration: BoxDecoration(
@@ -123,7 +160,8 @@ class Tickets extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              ),
+                Positioned(
                 left: 28,
                 top: 26,
                 child: SizedBox(

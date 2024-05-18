@@ -1,5 +1,4 @@
-
-import 'package:firebase_core/firebase_core.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter/material.dart'; // Import Firebase Core
 import 'home.dart';
 import 'splash.dart';
@@ -16,9 +15,15 @@ import 'event-dets.dart';
 import 'extra.dart';
 import 'feedback.dart';
 
-void main() async {
+
+
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+
+  await Supabase.initialize(
+    url: 'https://szpaytmjnuozzuopcyef.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN6cGF5dG1qbnVvenp1b3BjeWVmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTYwMzU4MTcsImV4cCI6MjAzMTYxMTgxN30.R37BQ1aYrMxMfwk5Qo9CjL4cnGAd0Yu4L11eKaYs330',
+  );
   runApp(MyApp());
 }
 

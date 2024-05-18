@@ -1,4 +1,5 @@
 import 'package:festiy/activity.dart';
+import 'package:festiy/event-dets.dart';
 import 'package:festiy/search.dart';
 import 'package:festiy/tickets.dart';
 import 'package:festiy/wallet.dart';
@@ -124,6 +125,7 @@ class Home extends StatelessWidget {
                 Positioned(
                   left: 68,
                   top: 14,
+
                   child: Container(
                     width: 83,
                     height: 59,
@@ -147,6 +149,12 @@ class Home extends StatelessWidget {
                 Positioned(
                   left: 33,
                   top: 665,
+                  child:GestureDetector(
+                    onTap: (){
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => EventDetails()),
+                      );
+                    },
                   child: Container(
                     width: 310,
                     height: 273,
@@ -157,6 +165,7 @@ class Home extends StatelessWidget {
                       ),
                     ),
                   ),
+                ),
                 ),
                 Positioned(
                   left: 31,
@@ -250,6 +259,12 @@ class Home extends StatelessWidget {
                 Positioned(
                   left: 26,
                   top: 285,
+                  child:GestureDetector(
+                    onTap: (){
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => EventDetails()),
+                      );
+                    },
                   child: Container(
                     width: 310,
                     height: 273,
@@ -260,6 +275,7 @@ class Home extends StatelessWidget {
                       ),
                     ),
                   ),
+                ),
                 ),
                 Positioned(
                   left: 26,

@@ -373,10 +373,8 @@ class Register extends StatelessWidget {
                 left: 103,
                 top: 572,
                 child: GestureDetector(
-                  onTap: () {
-                    // Navigate to home.dart when "Register" is clicked
-                    Navigator.push(
-                      context,
+                  onTap: (){
+                    Navigator.push(context,
                       MaterialPageRoute(builder: (context) => Home()),
                     );
                   },
